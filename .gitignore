@@ -1,0 +1,19 @@
+# Ignore SpecStory runtime/data
+.specstory/
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Env files
+.env
+.env.local
+
+# Editor directories and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
