@@ -1,6 +1,6 @@
 # Makefile — simple helpers to run the `site/` directory with nginx in Docker
 # Usage:
-#   make serve   # start container (http://localhost:8080)
+#   make run     # start container (http://localhost:8080)
 #   make stop    # stop and remove container
 #   make logs    # follow container logs
 #   make status  # show container status
@@ -9,9 +9,11 @@ CONTAINER_NAME := zeroone-site
 PORT := 8080
 IMAGE := nginx:stable-alpine
 
-.PHONY: serve stop logs status clean
 
-serve:
+.PHONY: run stop logs status clean
+.DEFAULT_GOAL := run
+
+run:
 	@echo "Starting $(CONTAINER_NAME) -> http://localhost:$(PORT)"
 	-@docker rm -f $(CONTAINER_NAME) >/dev/null 2>&1 || true
 	@docker run -d --name $(CONTAINER_NAME) -p $(PORT):80 \
