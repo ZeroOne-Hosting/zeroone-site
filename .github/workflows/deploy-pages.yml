@@ -3,6 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'site/**'
+      - 'CNAME'
+      - '.github/workflows/deploy-pages.yml'
 
 permissions:
   contents: read

@@ -13,7 +13,6 @@ build/
 .env.local
 
 # Editor directories and system files
-.vscode/
 .idea/
 .DS_Store
 Thumbs.db

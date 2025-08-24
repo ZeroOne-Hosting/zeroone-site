@@ -1,0 +1,16 @@
+{
+  // Workspace settings to allow agent-mode terminal commands used in local debugging.
+  // See: https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode#_manage-tool-approvals
+  "chat.tools.terminal.autoApprove": {
+    
+    "curl": true,
+    "make": true,
+    "sed": true,
+    "cat": true,
+    "head": true,
+    "docker": true,
+    "/^docker (ps|exec|inspect|run)\\b/": true,
+    "/^curl /": true,
+    "/^make /": true
+  }
+}
