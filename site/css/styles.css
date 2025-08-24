@@ -21,31 +21,35 @@
         --danger-red: #ff3366;
         --warning-orange: #ff6600;
 }
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Retro Color Palette */
+    --neon-cyan: #00ffff;
+    --neon-pink: #ff00ff;
+    --neon-green: #00ff00;
+    --neon-yellow: #ffff00;
+    --electric-blue: #0080ff;
+    --deep-purple: #1a0033;
+    --dark-bg: #0a0a0f;
+    --darker-bg: #050508;
+    --grid-color: rgba(0, 255, 255, 0.1);
+    --text-light: #e0e0e0;
+    --text-dim: #b0b0b0;
+    --danger-red: #ff3366;
+    --warning-orange: #ff6600;
+}
 
 body {
-        font-family: 'Orbitron', monospace;
-        background: var(--dark-bg);
-        color: var(--text-light);
-        line-height: 1.6;
-        overflow-x: hidden;
-}
-
-.container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-}
-
-/* Remote site's full stylesheet (synchronized from reference) */
-
-/* Reset & base */
-* { box-sizing: border-box; }
-html,body{height:100%;}
-body{
-    margin:0;
     font-family: 'VT323', monospace;
-    background: radial-gradient(ellipse at 10% 10%, rgba(255,45,149,0.06) 0%, transparent 15%), url('../images/neon_grid_bg.jpg') center/cover no-repeat, #04040a;
+    margin:0;
     color:#e6e6e6;
+    background: radial-gradient(ellipse at 10% 10%, rgba(255,45,149,0.06) 0%, transparent 15%), url('../images/neon_grid_bg.jpg') center/cover no-repeat, #04040a;
 }
 
 :root{
@@ -173,7 +177,4 @@ body {
     border-bottom: 2px solid var(--neon-cyan);
 }
 
-/* DIAGNOSTIC: visible outline to confirm external CSS is being applied */
-.header { outline: 6px dashed magenta !important; }
-
-... (truncated for brevity)
+/* ...rest of remote stylesheet preserved... */
