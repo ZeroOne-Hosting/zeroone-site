@@ -9,15 +9,20 @@ CONTAINER_NAME := zeroone-site
 PORT := 8080
 IMAGE := nginx:stable-alpine
 
+# Convert Make's CURDIR (which uses backslashes on Windows) to forward-slash form
+# so Docker receives a usable path when running on Windows hosts.
+HOST_SITE := $(subst \\,/,$(CURDIR))/site
+HOST_SITE2 := $(subst \\,/,$(CURDIR))/site2
+
 
 .PHONY: run stop logs status clean
 .DEFAULT_GOAL := run
 
-run:
+run: stop
 	@echo "Starting $(CONTAINER_NAME) -> http://localhost:$(PORT)"
-	-@docker rm -f $(CONTAINER_NAME) >/dev/null 2>&1 || true
 	@docker run -d --name $(CONTAINER_NAME) -p $(PORT):80 \
-		-v "$(PWD)/site:/usr/share/nginx/html:ro" $(IMAGE)
+		--mount type=bind,source="$(HOST_SITE)",target=/usr/share/nginx/html,readonly $(IMAGE)
+
 
 stop:
 	@docker rm -f $(CONTAINER_NAME) >/dev/null 2>&1 || true
