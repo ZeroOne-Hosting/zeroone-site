@@ -203,7 +203,55 @@ document.addEventListener('DOMContentLoaded', function() {
             "🏒 Pond hockey nearby — cooling water diverted",
             "🚴 Neighbor kid charging e-bike from UPS — runtime halved",
             "🕸️ Cobwebs detected in switch vents — cleaning deferred",
-            "💡 Holiday lights siphoning breaker capacity — uptime seasonal"
+            "💡 Holiday lights siphoning breaker capacity — uptime seasonal",
+            "🚪 Tier IV garage certification revoked (again)",
+            "🌮 Taco Bell wrapper used as thermal pad",
+            "🚗 Hyundai Kona charging off rack PDUs — sustainability mode",
+            "📟 Pager left in server room — constant beeping ignored",
+            "🥤 Baja Blast spill detected on switch ports",
+            "🏟️ Black Bears won — support team celebrating",
+            "🌋 Ashfall simulation running in HVAC system",
+            "📀 Burned CD discovered labeled 'Prod Backup — Do Not Touch'",
+            "🪵 Plywood upgrade to Raised Floor in progress",
+            "⚙️ Ceph cluster 'mostly fine' after power flicker",
+            "🔌 Extension cord loop achieving self-awareness",
+            "🥽 Neighbor kid welding in driveway — EMI risk high",
+            "🧊 Chest freezer coolant experiment underway",
+            "🧟 Zombie process escaped chroot jail",
+            "📡 Antenna rerouted through garage door gap",
+            "🦎 Lizard basking on UPS heat vents",
+            "📦 eBay pallet delivery — forklift access blocked",
+            "🏷️ Craigslist ad misposted — colo listed as 'spare room rental'",
+            "🚧 HOA threatening citation for visible server glow",
+            "🎶 Synthwave playlist buffering — uptime morale degraded",
+            "🍕 Little Caesars Hot-N-Ready warming rack 7",
+            "🏚️ Floor joist prayers engaged for RAID array survival",
+            "🎤 Craft Computing stream live — all ops halted",
+            "🐳 Docker container escaped into neighbor's Wi-Fi",
+            "📦 Kubernetes pod scheduled to the garage fridge",
+            "🧠 Local LLM demanding more VRAM — negotiations stalled",
+            "⚙️ Ceph cluster status: 'health-ish'",
+            "🪣 S3 bucket literally a Home Depot bucket",
+            "🚀 OpenStack instance launched into orbit (figuratively)",
+            "🔄 Ansible playbook stuck in infinite loop — send tacos",
+            "🤖 AI model hallucinated new VLANs — applying anyway",
+            "🪟 Proxmox console frozen — garage window repurposed",
+            "🐧 Penguin detected in rack — Linux kernel panic imminent",
+            "📊 Grafana dashboard taped to garage wall with duct tape",
+            "🖧 SDN controller rerouted through neighbor's smart fridge",
+            "🧩 Docker Compose file lost — searching Craigslist backups",
+            "🔒 Vault secrets stored under literal floorboard",
+            "🛢️ Ceph OSD replaced with old Zip disk",
+            "💾 RAID resync ETA: one geologic epoch",
+            "🔮 Local AI chatbot now convinced it's the UPS",
+            "🌐 BGP session announced to HOA mailing list",
+            "🛠️ Jenkins pipeline blocked by extension cord tangle",
+            "🧑‍💻 Terraform applied — garage drywall deleted",
+            "📶 Wi-Fi mesh node duct-taped to ceiling fan",
+            "🔎 Nagios alert acknowledged with Sharpie",
+            "🖥️ Homelab VM running Minesweeper in prod cluster",
+            "🎛️ Ceph quorum achieved after ritual chanting",
+            "🥽 VR headset left training LLM — GPU overheating"
         ];
         
         const message = messages[Math.floor(Math.random() * messages.length)];
@@ -235,21 +283,21 @@ document.addEventListener('DOMContentLoaded', function() {
             notification.style.right = '20px';
         }, 100);
         
-        // Slide out after 5 seconds
+        // Slide out after 7 seconds
         setTimeout(() => {
             notification.style.right = '-400px';
             setTimeout(() => {
                 document.body.removeChild(notification);
             }, 500);
-        }, 5000);
+        }, 7000);
     }
 
-    // Show random server messages every 45-90 seconds
+    // Show random server messages every 15-30 seconds
     setInterval(() => {
-        if (Math.random() > 0.4) { // 60% chance
+        if (Math.random() > 0.3) { // 70% chance
             showServerMessage();
         }
-    }, Math.random() * 45000 + 45000);
+    }, Math.random() * 15000 + 15000);
 
     // Add hover sound effect simulation (visual feedback)
     document.querySelectorAll('.feature-card, .package-card, .testimonial-card').forEach(card => {
