@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
             font-size: 1rem;
             z-index: 10000;
             transition: right 0.5s ease;
-            max-width: 350px;
+            max-width: 450px;
             box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
         `;
         notification.textContent = message;
